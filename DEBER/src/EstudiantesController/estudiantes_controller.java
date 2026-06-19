@@ -30,8 +30,8 @@ public class estudiantes_controller {
     //buscar 
     public estudiantes_model buscarEstudiante(String cedula){
         for (estudiantes_model estudiante: listaEstudiante) {
-            if (estudiante.getCedula()==cedula) {
-                return estudiante;
+            if (estudiante.getCedula().equals(cedula)) {
+            return estudiante;
             }
         }
         return null;
