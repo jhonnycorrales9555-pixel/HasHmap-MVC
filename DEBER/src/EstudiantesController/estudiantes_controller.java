@@ -23,10 +23,17 @@ public class estudiantes_controller {
     //listar o mostrar
     
     public void listarEstudiante(){
-        for(estudiantes_model estudiante : listaEstudiante){
-            System.out.println(estudiante);
-        }    
+
+    if(listaEstudiante.isEmpty()){
+        System.out.println("No existen estudiantes registrados.");
+        return;
     }
+
+    for(estudiantes_model estudiante : listaEstudiante){
+        System.out.println(estudiante);
+        System.out.println("----------------------");
+    }
+}
     //buscar 
     public estudiantes_model buscarEstudiante(String cedula){
         for (estudiantes_model estudiante: listaEstudiante) {
