@@ -40,6 +40,12 @@ public class cliente_model {
     public String getCorreo() {
         return correo;
     }
+    
+    setCedula()
+    setNombre()
+    setApellido()
+    setTelefono()
+    setCorreo()
 
     
 }
