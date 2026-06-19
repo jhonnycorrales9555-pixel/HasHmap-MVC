@@ -17,6 +17,14 @@ public class cliente_model {
     private String telefono;
     private String correo;
     
-
+    // Constructor
+    public cliente_model(String cedula, String nombre, String apellido, String telefono, String correo) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+    }
+    
     
 }
