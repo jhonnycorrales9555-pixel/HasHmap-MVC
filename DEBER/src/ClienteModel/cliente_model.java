@@ -45,16 +45,18 @@ public class cliente_model {
         this.cedula = cedula;
     }
     public void setNombre(String nombre){
-        
+        this.nombre = nombre;
     }
     public void setApellido(String apellido){
+        this.apellido = apellido;
         
     }
     public void setTelefono(String telefono){
+        this.telefono = telefono;
         
     }
     public void setCorreo(String correo){
-        
+        this.correo = correo;
     }
 
     
