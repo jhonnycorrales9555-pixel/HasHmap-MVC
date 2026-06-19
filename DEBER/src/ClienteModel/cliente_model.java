@@ -25,6 +25,21 @@ public class cliente_model {
         this.telefono = telefono;
         this.correo = correo;
     }
-    
+        public String getCedula() {
+        return cedula;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getApellido() {
+        return apellido;
+    }
+    public String getTelefono() {
+        return telefono;
+    }
+    public String getCorreo() {
+        return correo;
+    }
+
     
 }
