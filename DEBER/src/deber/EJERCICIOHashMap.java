@@ -12,6 +12,16 @@ static HashMap<String,String>inventario = new HashMap<>();
 static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         String op=sc.nextLine();
+        System.out.println("""
+        ===============
+          C  R  U  D  
+        ===============
+        1.-INGRESAR
+        2.-MOSTRAR
+        3.-ACTUALIZAR
+        4.-ELIMINAR
+        5.-SALIR
+        ===============""");
         switch(op){
             case "1": ingresar(); break;
             case "2": mostrar(); break;
