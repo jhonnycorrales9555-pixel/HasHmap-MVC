@@ -10,4 +10,13 @@ package ClienteModel;
  */
 public class cliente_model {
     
+    // Atributos
+    private String cedula;
+    private String nombre;
+    private String apellido;
+    private String telefono;
+    private String correo;
+    
+
+    
 }
