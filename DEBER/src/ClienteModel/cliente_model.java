@@ -58,7 +58,8 @@ public class cliente_model {
     public void setCorreo(String correo){
         this.correo = correo;
     }
-   
+    
+    
     @Override
     public String toString() {
         return "Cedula: " + cedula +
@@ -67,5 +68,6 @@ public class cliente_model {
                "\nTelefono: " + telefono +
                "\nCorreo: " + correo;
     }
+
     
 }
