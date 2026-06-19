@@ -4,15 +4,10 @@
  */
 package ClienteView;
 
-import ClienteModel.cliente_model;
-import java.util.ArrayList;
-import java.util.HashMap;
-
 /**
  *
  * @author pc
  */
 public class cliente_view {
-    
     
 }
