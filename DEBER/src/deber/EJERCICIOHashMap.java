@@ -31,7 +31,7 @@ static Scanner sc = new Scanner(System.in);
             case "2": mostrar(); break;
             case "3":  actualizar(); break;
             case "4": eliminar(); break;
-            case "5": System.out.println("Saliendo..........");
+            case "5": System.out.println("Saliendo del sistema");
             break;
             default:
             System.out.println("!OPCION INCORRECTA!\n");break;
