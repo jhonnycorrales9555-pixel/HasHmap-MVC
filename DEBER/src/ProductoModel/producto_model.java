@@ -17,7 +17,7 @@ public class producto_model {
     public int cantidad;
     public int stock;
     
-    //constructor
+    //CONSTRUCTOR
     
     public producto_model(String codigo, String nombre, String marca, double precio, int cantidad, int stock){
         this.codigo = codigo;
