@@ -79,8 +79,7 @@ public class estudiantes_view {
                 break;
             case 5:
                 System.out.println("GRCIAS POR USAR EL PROGRAMA");
-                System.exit(0);
-                break;
+                return;
             default:
                 System.out.println("opcion incorrecta:D");
             
