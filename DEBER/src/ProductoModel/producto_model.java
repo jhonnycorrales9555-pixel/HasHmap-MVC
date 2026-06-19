@@ -49,4 +49,29 @@ public class producto_model {
         return stock;
     }
     
+    //seteters
+    
+    public void setCodigo(String codigo){
+        this.codigo = codigo;
+    }
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public void setMarca(String marca){
+        this.marca = marca;
+    }
+    public void setPrecio(double precio){
+        this.precio = precio;
+    }
+    public void setCantidad(int cantidad){
+        this.cantidad = cantidad;
+    }
+    public void setStock(int stock){
+        this.stock = stock;
+    }
+    
+    
+    
+    
+    
 }
