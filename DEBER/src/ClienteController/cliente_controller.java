@@ -13,8 +13,8 @@ import java.util.HashMap;
  * @author pc
  */
 public class cliente_controller {
-    private ArrayList<cliente_model> listaClientes;
-    private HashMap<String, cliente_model> mapaClientes;
+    private ArrayList<cliente_model> listaClientes = new ArrayList<>();
+    private HashMap<String, cliente_model> mapaClientes = new HashMap<>();
     public cliente_controller() {
         listaClientes = new ArrayList<>();
         mapaClientes = new HashMap<>();
