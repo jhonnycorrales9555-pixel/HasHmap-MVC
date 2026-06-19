@@ -27,7 +27,7 @@ public class estudiantes_view {
         4. Eliminar estudiante
         5. Salir
         ==================================
-        Seleccione una opción:
+        Seleccione una opcion:
     """);
         int opc = sc.nextInt();
         sc.nextLine(); // limpiar buffer
