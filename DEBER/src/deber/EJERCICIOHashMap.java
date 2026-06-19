@@ -15,6 +15,7 @@ static Scanner sc = new Scanner(System.in);
         switch(op){
             case "1": ingresar(); break;
             case "2": mostrar(); break;
+            case "3":  actualizar(); break;
         }
     }
     
@@ -54,4 +55,49 @@ static Scanner sc = new Scanner(System.in);
             }
         }
     }
-}
+    
+    public static void actualizar(){
+        if (inventario.isEmpty()) {
+        System.out.println("NO EXISTE");
+        return;
+        }else{
+        System.out.print("INGRESE CODIGO: ");
+        String codigoEdit = sc.nextLine();
+            if (inventario.containsKey(codigoEdit)) {
+            System.out.println("NUEVO NOMBRE: ");   
+            String nNombre=sc.nextLine();
+            System.out.println("NUEVA MARCA: ");
+              String nMarca=sc.nextLine();
+            System.out.println("NUEVO PRECIO: ");  
+             String nPrecio=sc.nextLine();
+            System.out.println("NUEVA CANTIDAD"); 
+            String nCantidad=sc.nextLine();
+            System.out.println("NUEVO STOCK: ");     
+            String nStock=sc.nextLine();
+            String nuevosDatos= nNombre+","+nPrecio+","+nCantidad+","+nStock;
+            inventario.put(codigoEdit,nuevosDatos);
+            }
+              } 
+    }
+    public static void eliminar(){
+     if (inventario.isEmpty()) {
+        System.out.println("""
+        -------------------------
+         NO EXISTE INVENTARIO
+        -------------------------""");
+        return;  
+      }else {
+          System.out.println("\n==============================");
+          System.out.println("CODIGO A ELIMINAR: ");
+          String CodigoBorrar=sc.nextLine();
+         if (inventario.containsKey(CodigoBorrar)){
+             inventario.remove(CodigoBorrar);
+             System.out.println("INVENTARIO ELIINADO CON EXITO");
+             System.out.println("==============================\n");
+         }else {
+             System.out.println("\nNO SE ENCONTRO EL CODIGO");
+         }         
+        }
+    }
+    }
+
