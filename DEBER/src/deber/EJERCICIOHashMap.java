@@ -112,7 +112,9 @@ static Scanner sc = new Scanner(System.in);
             String nCantidad=sc.nextLine();
             System.out.println("NUEVO STOCK: ");     
             String nStock=sc.nextLine();
-            String nuevosDatos= nNombre+","+nMarca+","+nPrecio+","+nCantidad+","+nStock;
+            //restar la cantidad al stock
+        int resultado = Integer.parseInt(nStock) - Integer.parseInt(nCantidad);
+            String nuevosDatos= nNombre+","+nMarca+","+nPrecio+","+nCantidad+","+resultado;
             inventario.put(codigoEdit,nuevosDatos);
             System.out.println("---------------------------------");
             System.out.println("USUARIO ACTUALIZADO");
