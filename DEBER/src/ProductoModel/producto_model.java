@@ -27,4 +27,26 @@ public class producto_model {
         this.cantidad = cantidad;
         this.stock = stock;   
     }
+    
+    //metodo get y set
+    
+    public String getCodigo(){
+        return codigo;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public String getMarca(){
+        return marca;
+    }
+    public double getPrecio(){
+        return precio;
+    }
+    public int getCantidad(){
+        return cantidad;
+    }
+    public int getStock(){
+        return stock;
+    }
+    
 }
