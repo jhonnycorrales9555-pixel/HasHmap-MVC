@@ -36,10 +36,8 @@ public class estudiantes_model {
     public String getCarrera() {
         return carrera;
     }
-    public String getCorreo() {
-        return correo;
-    }
     
+    //setters
     public void setCedula(String cedula){
         this.cedula = cedula;
     }
@@ -50,22 +48,17 @@ public class estudiantes_model {
         this.apellido = apellido;
         
     }
-    public void setTelefono(String telefono){
-        this.telefono = telefono;
+    public void setCarrera(String carrera){
+        this.carrera = carrera;
         
     }
-    public void setCorreo(String correo){
-        this.correo = correo;
-    }
-    
     
     @Override
     public String toString() {
         return "Cedula: " + cedula +
                "\nNombre: " + nombre +
                "\nApellido: " + apellido +
-               "\nTelefono: " + telefono +
-               "\nCorreo: " + correo;
+               "\nTelefono: " + carrera;
     }
 
     
