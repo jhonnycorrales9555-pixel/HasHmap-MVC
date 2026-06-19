@@ -11,6 +11,7 @@ public class EJERCICIOHashMap {
 static HashMap<String,String>inventario = new HashMap<>();
 static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
+    String op;
      do {    
         System.out.println("""
         ===============
@@ -22,17 +23,22 @@ static Scanner sc = new Scanner(System.in);
         4.-ELIMINAR
         5.-SALIR
         ===============""");
-        String op=sc.nextLine();
+         op=sc.nextLine();
         sc.nextLine();
         switch(op){
             case "1": ingresar(); break;
             case "2": mostrar(); break;
             case "3":  actualizar(); break;
+            default:
+            System.out.println("!OPCION INCORRECTA!\n");break;
         }
     } while (!op.equals("5"));
     }
     
     public static void ingresar(){
+        System.out.println("\n=================================");
+        System.out.println("        I N G R E S A R ");
+        System.out.println("---------------------------------");
         System.out.println("ID: ");
         String codigo = sc.nextLine();
         System.out.println("NOMBRE: ");
