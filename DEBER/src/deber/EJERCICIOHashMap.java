@@ -60,13 +60,16 @@ static Scanner sc = new Scanner(System.in);
     }
     public static void mostrar(){
         if (inventario.isEmpty()) {
-            System.out.println("NO EXISTE");
+            System.out.println("""
+            -------------------------
+             NO EXISTE INVENTARIO
+            -------------------------""");
             return;
         }else{
             for (String codigo :inventario.keySet()) {
             String [] datos = inventario.get(codigo).split(",");
         System.out.println("\n=================================");
-        System.out.println("        I N G R E S A R");
+        System.out.println("        L I S T A R");
         System.out.println("---------------------------------");
                 System.out.println("");
                 System.out.println("CODIGO: "+codigo);
@@ -75,6 +78,7 @@ static Scanner sc = new Scanner(System.in);
                 System.out.println("PRECIO: "+datos[2]);
                 System.out.println("CANTIDAD: "+datos[3]);
                 System.out.println("STOCK ACTUAL: "+datos[4]);
+                System.out.println("=================================\n");
             
                 
             }
@@ -83,12 +87,18 @@ static Scanner sc = new Scanner(System.in);
     
     public static void actualizar(){
         if (inventario.isEmpty()) {
-        System.out.println("NO EXISTE");
-        return;
+            System.out.println("""
+            -------------------------
+             NO EXISTE INVENTARIO
+            -------------------------""");
+            return;
         }else{
         System.out.print("INGRESE CODIGO: ");
         String codigoEdit = sc.nextLine();
             if (inventario.containsKey(codigoEdit)) {
+           System.out.println("\n=================================");
+            System.out.println("     A C T U A L I Z A R ");
+            System.out.println("---------------------------------");
             System.out.println("NUEVO NOMBRE: ");   
             String nNombre=sc.nextLine();
             System.out.println("NUEVA MARCA: ");
