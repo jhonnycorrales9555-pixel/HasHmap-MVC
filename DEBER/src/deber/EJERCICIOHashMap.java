@@ -53,8 +53,9 @@ static Scanner sc = new Scanner(System.in);
         String cant = sc.nextLine();
         System.out.println("STOCK ACTUAL: ");
         String stock = sc.nextLine();
-        
-       inventario.put(codigo,nombre+","+marca+","+precio+","+cant+","+stock);
+        //restar la cantidad al stock
+        int resultado = Integer.parseInt(stock) - Integer.parseInt(cant);
+       inventario.put(codigo,nombre+","+marca+","+precio+","+cant+","+resultado);
         System.out.println("---------------------------------");
         System.out.println("PRODUCTO AGREGADO CON EXITO ");
         System.out.println("=================================\n");
