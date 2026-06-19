@@ -54,7 +54,7 @@ static Scanner sc = new Scanner(System.in);
         System.out.println("STOCK ACTUAL: ");
         String stock = sc.nextLine();
         
-       inventario.put(codigo,nombre+","+cant+","+stock);
+       inventario.put(codigo,nombre+","+marca+","+precio+","+cant+","+stock);
         System.out.println("---------------------------------");
         System.out.println("PRODUCTO AGREGADO CON EXITO ");
         System.out.println("=================================\n");
@@ -68,8 +68,8 @@ static Scanner sc = new Scanner(System.in);
             -------------------------""");
             return;
         }else{
-            for (String codigo :inventario.keySet()) {
-            String [] datos = inventario.get(codigo).split(",");
+        for (String codigo :inventario.keySet()) {
+        String [] datos = inventario.get(codigo).split(",");
         System.out.println("\n=================================");
         System.out.println("        L I S T A R");
         System.out.println("---------------------------------");
@@ -111,7 +111,7 @@ static Scanner sc = new Scanner(System.in);
             String nCantidad=sc.nextLine();
             System.out.println("NUEVO STOCK: ");     
             String nStock=sc.nextLine();
-            String nuevosDatos= nNombre+","+nPrecio+","+nCantidad+","+nStock;
+            String nuevosDatos= nNombre+","+nMarca+","+nPrecio+","+nCantidad+","+nStock;
             inventario.put(codigoEdit,nuevosDatos);
             System.out.println("---------------------------------");
             System.out.println("USUARIO ACTUALIZADO");
