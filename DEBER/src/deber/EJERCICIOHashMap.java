@@ -23,12 +23,14 @@ static Scanner sc = new Scanner(System.in);
         4.-ELIMINAR
         5.-SALIR
         ===============""");
-         op=sc.nextLine();
-        sc.nextLine();
+         System.out.print("OPCION: ");
+        op=sc.nextLine();
+        
         switch(op){
             case "1": ingresar(); break;
             case "2": mostrar(); break;
             case "3":  actualizar(); break;
+            case "4": eliminar(); break;
             default:
             System.out.println("!OPCION INCORRECTA!\n");break;
         }
@@ -111,6 +113,11 @@ static Scanner sc = new Scanner(System.in);
             String nStock=sc.nextLine();
             String nuevosDatos= nNombre+","+nPrecio+","+nCantidad+","+nStock;
             inventario.put(codigoEdit,nuevosDatos);
+            System.out.println("---------------------------------");
+            System.out.println("USUARIO ACTUALIZADO");
+            System.out.println("=================================\n");
+            }else{
+                System.out.println("El CODIGO NO  EXISTE");
             }
               } 
     }
@@ -127,7 +134,7 @@ static Scanner sc = new Scanner(System.in);
           String CodigoBorrar=sc.nextLine();
          if (inventario.containsKey(CodigoBorrar)){
              inventario.remove(CodigoBorrar);
-             System.out.println("INVENTARIO ELIINADO CON EXITO");
+             System.out.println("INVENTARIO ELIMINADO CON EXITO");
              System.out.println("==============================\n");
          }else {
              System.out.println("\nNO SE ENCONTRO EL CODIGO");
