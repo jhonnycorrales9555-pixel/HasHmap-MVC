@@ -134,15 +134,15 @@ static Scanner sc = new Scanner(System.in);
         -------------------------""");
         return;  
       }else {
-          System.out.println("\n==============================");
+          System.out.println("==============================");
           System.out.println("CODIGO A ELIMINAR: ");
           String CodigoBorrar=sc.nextLine();
          if (inventario.containsKey(CodigoBorrar)){
              inventario.remove(CodigoBorrar);
              System.out.println("INVENTARIO ELIMINADO CON EXITO");
-             System.out.println("==============================\n");
+             System.out.println("==============================");
          }else {
-             System.out.println("\nNO SE ENCONTRO EL CODIGO");
+             System.out.println(" NO SE ENCONTRO EL CODIGO");
          }         
         }
     }
