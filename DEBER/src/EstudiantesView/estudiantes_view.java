@@ -17,20 +17,25 @@ public class estudiantes_view {
     
     public void menu(){
         while(true){
-        System.out.println("****************");
-        System.out.println("1. Agregar");
-        System.out.println("2. Mostrar");
-        System.out.println("3. Actualizar");
-        System.out.println("4. Eliminar");
-        System.out.println("5. Salir");
-        System.out.println("Selecciona una opcion: ");
+            System.out.println("""
+        ==================================
+            SISTEMA DE ESTUDIANTES
+        ==================================
+        1. Agregar estudiante
+        2. Mostrar estudiantes
+        3. Actualizar estudiante
+        4. Eliminar estudiante
+        5. Salir
+        ==================================
+        Seleccione una opción:
+    """);
         int opc = sc.nextInt();
+        sc.nextLine(); // limpiar buffer
         
             switch(opc){
             case 1:
                 System.out.println("Ingresa la cedula: ");
                 String cedula= sc.nextLine();
-                sc.nextLine();
                 System.out.println("Ingresa el nombre: ");
                 String nombre = sc.nextLine();
                 System.out.println("Ingresa el apellido: ");
@@ -45,10 +50,10 @@ public class estudiantes_view {
             case 2:
                 controlador.listarEstudiante();
                 break;
+            
             case 3:
                 System.out.println("Cedula del estudiante: ");
                 cedula = sc.nextLine();
-                sc.nextLine();
                 System.out.println("Nuevo nombre: ");
                 nombre = sc.nextLine();
                 System.out.println("Nuevo Apelldio: ");
