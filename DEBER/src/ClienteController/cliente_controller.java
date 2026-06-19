@@ -36,6 +36,23 @@ public class cliente_controller {
             System.out.println(cliente);
         }
     }
+    // Buscar
+    public cliente_model buscarCliente(String cedula) {
+        return mapaClientes.get(cedula);
+    }
+    // Eliminar
+    public boolean eliminarCliente(String cedula) {
+
+        cliente_model cliente = mapaClientes.get(cedula);
+
+        if (cliente != null) {
+            listaClientes.remove(cliente);
+            mapaClientes.remove(cedula);
+            return true;
+        }
+
+        return false;
+    }
 
 
 }
