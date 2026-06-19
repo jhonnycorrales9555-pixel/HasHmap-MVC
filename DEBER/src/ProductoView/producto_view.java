@@ -13,30 +13,32 @@ import java.util.Scanner;
  * @author USER
  */
 public class producto_view {
-    public static void main(String[] args) {
+    
+   Scanner sc = new Scanner(System.in);
+    producto_controller controlador = new producto_controller();
 
-        Scanner sc = new Scanner(System.in);
-        producto_controller controlador = new producto_controller();
+    public void menu() {
 
-        String op;
-
-        do {
+        while (true) {
 
             System.out.println("""
-                    ============
-                       MENU
-                    ============
-                    1. INGRESAR
-                    2. MOSTRAR
-                    3. ELIMINAR
-                    4. SALIR
-                    """);
+            ==================================
+                  SISTEMA DE PAPELERIA
+            ==================================
+            1. Agregar producto
+            2. Mostrar productos
+            3. Eliminar producto
+            4. Salir
+            ==================================
+            Seleccione una opcion:
+            """);
 
-            op = sc.nextLine();
+            int opc = sc.nextInt();
+            sc.nextLine();
 
-            switch (op) {
+            switch (opc) {
 
-                case "1":
+                case 1:
 
                     System.out.print("Codigo: ");
                     String codigo = sc.nextLine();
@@ -56,50 +58,67 @@ public class producto_view {
                     System.out.print("Stock: ");
                     int stock = Integer.parseInt(sc.nextLine());
 
-                    producto_model p = new producto_model(
-                            codigo, nombre, marca,
-                            precio, cantidad, stock);
+                    producto_model producto = new producto_model(
+                            codigo,
+                            nombre,
+                            marca,
+                            precio,
+                            cantidad,
+                            stock);
 
-                    controlador.agregar(p);
+                    controlador.agregar(producto);
 
                     System.out.println("Producto registrado");
                     break;
 
-                case "2":
+                case 2:
 
-                    for (producto_model prod :
-                            controlador.listar().values()) {
+                    if (controlador.listar().isEmpty()) {
+                        System.out.println("No existen productos");
+                    } else {
 
-                        System.out.println("----------------");
-                        System.out.println("Codigo: " + prod.getCodigo());
-                        System.out.println("Nombre: " + prod.getNombre());
-                        System.out.println("Marca: " + prod.getMarca());
-                        System.out.println("Precio: " + prod.getPrecio());
-                        System.out.println("Cantidad: " + prod.getCantidad());
-                        System.out.println("Stock: " + prod.getStock());
+                        for (producto_model prod : controlador.listar().values()) {
+
+                            System.out.println("\n----------------------");
+                            System.out.println("Codigo: " + prod.getCodigo());
+                            System.out.println("Nombre: " + prod.getNombre());
+                            System.out.println("Marca: " + prod.getMarca());
+                            System.out.println("Precio: " + prod.getPrecio());
+                            System.out.println("Cantidad: " + prod.getCantidad());
+                            System.out.println("Stock: " + prod.getStock());
+                        }
                     }
 
                     break;
 
-                case "3":
+                case 3:
 
                     System.out.print("Codigo a eliminar: ");
                     String cod = sc.nextLine();
 
                     controlador.eliminar(cod);
 
-                    System.out.println("Eliminado");
+                    System.out.println("Producto eliminado");
                     break;
 
-                case "4":
-                    System.out.println("Saliendo...");
+                case 4:
+
+                    System.out.println("GRACIAS POR USAR EL SISTEMA");
+                    System.exit(0);
                     break;
 
                 default:
+
                     System.out.println("Opcion incorrecta");
             }
+        }
+    }
 
-        } while (!op.equals("4"));
+    public static void main(String[] args) {
+
+        producto_view vista = new producto_view();
+        vista.menu();
+
     }
 }
     

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package deber;
+import ProductoView.producto_view;
 import ClienteView.cliente_view;
 import EstudiantesView.estudiantes_view;
 import java.util.Scanner;
@@ -25,7 +26,8 @@ public class DEBER {
         ==================================
         1. Sistema de clientes
         2. Sistema de estudiantes
-        3. Salir
+        3. Sistema del producto
+        4. Salir
         ==================================
         Seleccione una opcion:
     """);
@@ -42,6 +44,10 @@ public class DEBER {
                     vistaEstudiantes.menu();
                     break;
                 case 3:
+                    producto_view vistaProducto = new producto_view();
+                    vistaProducto.menu();
+                    
+                case 4:
                     System.out.println("GRACIAS POR USAR EL PROGRAMA");
                     System.exit(0);
                     break;
