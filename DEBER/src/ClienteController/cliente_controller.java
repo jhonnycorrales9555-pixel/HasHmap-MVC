@@ -24,6 +24,18 @@ public class cliente_controller {
         listaClientes.add(cliente);
         mapaClientes.put(cliente.getCedula(), cliente);
     }
+    // mostrar
+    public void mostrarClientes() {
 
-    
+        if (listaClientes.isEmpty()) {
+            System.out.println("No hay clientes registrados.");
+            return;
+        }
+
+        for (cliente_model cliente : listaClientes) {
+            System.out.println(cliente);
+        }
+    }
+
+
 }
