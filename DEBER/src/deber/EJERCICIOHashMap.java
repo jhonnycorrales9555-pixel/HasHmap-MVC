@@ -53,6 +53,9 @@ static Scanner sc = new Scanner(System.in);
         String stock = sc.nextLine();
         
        inventario.put(codigo,nombre+","+cant+","+stock);
+        System.out.println("---------------------------------");
+        System.out.println("PRODUCTO AGREGADO CON EXITO ");
+        System.out.println("=================================\n");
            
     }
     public static void mostrar(){
@@ -62,6 +65,9 @@ static Scanner sc = new Scanner(System.in);
         }else{
             for (String codigo :inventario.keySet()) {
             String [] datos = inventario.get(codigo).split(",");
+        System.out.println("\n=================================");
+        System.out.println("        I N G R E S A R");
+        System.out.println("---------------------------------");
                 System.out.println("");
                 System.out.println("CODIGO: "+codigo);
                 System.out.println("NOMBRE: "+datos[0]);
