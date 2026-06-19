@@ -9,5 +9,10 @@ package ProductoModel;
  * @author USER
  */
 public class producto_model {
-    
+    public String codigo;
+    public String nombre;
+    public String marca;
+    public double precio;
+    public int cantidad;
+    public int stock;
 }
