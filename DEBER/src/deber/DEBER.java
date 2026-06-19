@@ -4,8 +4,8 @@
  */
 package deber;
 import ProductoView.producto_view;
-import ClienteView.cliente_view;
 import EstudiantesView.estudiantes_view;
+import ClienteView.cliente_view;
 import java.util.Scanner;
 /**
  *
@@ -26,7 +26,7 @@ public class DEBER {
         ==================================
         1. Sistema de clientes
         2. Sistema de estudiantes
-        3. Sistema del producto
+        3. Sistema de producto
         4. Salir
         ==================================
         Seleccione una opcion:
@@ -44,8 +44,9 @@ public class DEBER {
                     vistaEstudiantes.menu();
                     break;
                 case 3:
-                    producto_view vistaProducto = new producto_view();
-                    vistaProducto.menu();
+                     producto_view vistaProducto = new producto_view();
+                     vistaProducto.menu();
+                     break;
                     
                 case 4:
                     System.out.println("GRACIAS POR USAR EL PROGRAMA");

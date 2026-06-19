@@ -22,9 +22,8 @@ public class producto_view {
         while (true) {
 
             System.out.println("""
-            ==================================
                   SISTEMA DE PAPELERIA
-            ==================================
+                               
             1. Agregar producto
             2. Mostrar productos
             3. Eliminar producto
@@ -46,9 +45,6 @@ public class producto_view {
                     System.out.print("Nombre: ");
                     String nombre = sc.nextLine();
 
-                    System.out.print("Marca: ");
-                    String marca = sc.nextLine();
-
                     System.out.print("Precio: ");
                     double precio = Double.parseDouble(sc.nextLine());
 
@@ -61,7 +57,6 @@ public class producto_view {
                     producto_model producto = new producto_model(
                             codigo,
                             nombre,
-                            marca,
                             precio,
                             cantidad,
                             stock);
@@ -73,33 +68,21 @@ public class producto_view {
 
                 case 2:
 
-                    if (controlador.listar().isEmpty()) {
-                        System.out.println("No existen productos");
-                    } else {
-
-                        for (producto_model prod : controlador.listar().values()) {
-
-                            System.out.println("\n----------------------");
-                            System.out.println("Codigo: " + prod.getCodigo());
-                            System.out.println("Nombre: " + prod.getNombre());
-                            System.out.println("Marca: " + prod.getMarca());
-                            System.out.println("Precio: " + prod.getPrecio());
-                            System.out.println("Cantidad: " + prod.getCantidad());
-                            System.out.println("Stock: " + prod.getStock());
-                        }
-                    }
-
+                   controlador.listarProducto();
                     break;
 
                 case 3:
-
                     System.out.print("Codigo a eliminar: ");
                     String cod = sc.nextLine();
 
-                    controlador.eliminar(cod);
+                    if (controlador.eliminarProducto(cod)) {
+                        System.out.println("Producto eliminado con exito");
+                    } else {
+                        System.out.println("No existe producto a eliminar");
+                    }
 
-                    System.out.println("Producto eliminado");
                     break;
+    
 
                 case 4:
 

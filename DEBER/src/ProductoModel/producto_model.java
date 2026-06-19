@@ -12,17 +12,15 @@ public class producto_model {
     //atributos
     public String codigo;
     public String nombre;
-    public String marca;
     public double precio;
     public int cantidad;
     public int stock;
     
     //CONSTRUCTOR
     
-    public producto_model(String codigo, String nombre, String marca, double precio, int cantidad, int stock){
+    public producto_model(String codigo, String nombre, double precio, int cantidad, int stock){
         this.codigo = codigo;
         this.nombre = nombre;
-        this.marca = marca;
         this.precio = precio;
         this.cantidad = cantidad;
         this.stock = stock;   
@@ -35,9 +33,6 @@ public class producto_model {
     }
     public String getNombre(){
         return nombre;
-    }
-    public String getMarca(){
-        return marca;
     }
     public double getPrecio(){
         return precio;
@@ -57,9 +52,6 @@ public class producto_model {
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
-    public void setMarca(String marca){
-        this.marca = marca;
-    }
     public void setPrecio(double precio){
         this.precio = precio;
     }
@@ -75,7 +67,6 @@ public class producto_model {
     public String toString(){
         return "codigo: "+ codigo 
                 + "nombre: "+ nombre 
-                + "marca: " + marca 
                 + "precio: " + precio 
                 + "cantidad: " + cantidad 
                 + "stock: " + stock;
