@@ -46,14 +46,18 @@ public class estudiantes_controller {
         return false;
     }
     //
-    public boolean actualizarEstudiante(String cedula, String nombre, String apellido, String carrera){
+    public boolean actualizarEstudiante(String cedula,String nombre,String apellido, String carrera){
         estudiantes_model estudiante = buscarEstudiante(cedula);
-        if (estudiante!=null) {
+
+        if(estudiante != null){
+
             estudiante.setNombre(nombre);
             estudiante.setApellido(apellido);
             estudiante.setCarrera(carrera);
-            
+
+            return true;
         }
+
         return false;
     }
 }
