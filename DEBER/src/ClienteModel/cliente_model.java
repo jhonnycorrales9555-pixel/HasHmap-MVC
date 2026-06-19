@@ -41,11 +41,21 @@ public class cliente_model {
         return correo;
     }
     
-    setCedula()
-    setNombre()
-    setApellido()
-    setTelefono()
-    setCorreo()
+    public void setCedula(String cedula){
+        this.cedula = cedula;
+    }
+    public void setNombre(String nombre){
+        
+    }
+    public void setApellido(String apellido){
+        
+    }
+    public void setTelefono(String telefono){
+        
+    }
+    public void setCorreo(String correo){
+        
+    }
 
     
 }
