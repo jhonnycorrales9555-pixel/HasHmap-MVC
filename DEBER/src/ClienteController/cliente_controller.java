@@ -53,6 +53,32 @@ public class cliente_controller {
 
         return false;
     }
+    // Actualizar teléfono
+    public boolean actualizarTelefono(String cedula, String telefono) {
+
+        cliente_model cliente = mapaClientes.get(cedula);
+
+        if (cliente != null) {
+            cliente.setTelefono(telefono);
+            return true;
+        }
+
+        return false;
+    }
+
+    // Actualizar correo
+    public boolean actualizarCorreo(String cedula, String correo) {
+
+        cliente_model cliente = mapaClientes.get(cedula);
+
+        if (cliente != null) {
+            cliente.setCorreo(correo);
+            return true;
+        }
+
+        return false;
+    }
+
 
 
 }
