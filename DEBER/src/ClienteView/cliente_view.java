@@ -43,5 +43,9 @@ public class cliente_view {
 
         System.out.println("Cliente registrado correctamente.");
     }
+     public void mostrarClientes() {
+        controlador.mostrarClientes();
+    }
+
     
 }
