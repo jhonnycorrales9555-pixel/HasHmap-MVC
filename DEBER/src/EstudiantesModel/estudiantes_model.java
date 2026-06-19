@@ -17,13 +17,12 @@ public class estudiantes_model {
    
     
     // Constructor
-    public estudiantes_model(String cedula, String nombre, String apellido, String telefono, String correo) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.carrera = telefono;
-        
-    }
+    public estudiantes_model(String cedula, String nombre, String apellido, String carrera) {
+    this.cedula = cedula;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.carrera = carrera;
+}
         public String getCedula() {
         return cedula;
     }
@@ -54,12 +53,11 @@ public class estudiantes_model {
     }
     
     @Override
-    public String toString() {
-        return "Cedula: " + cedula +
-               "\nNombre: " + nombre +
-               "\nApellido: " + apellido +
-               "\nTelefono: " + carrera;
-    }
-
+public String toString() {
+    return "Cedula: " + cedula +
+           "\nNombre: " + nombre +
+           "\nApellido: " + apellido +
+           "\nCarrera: " + carrera;
+}
     
 }

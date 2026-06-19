@@ -29,7 +29,7 @@ public class estudiantes_view {
             switch(opc){
             case 1:
                 System.out.println("Ingresa la cedula: ");
-                int cedula= sc.nextInt();
+                String cedula= sc.nextLine();
                 sc.nextLine();
                 System.out.println("Ingresa el nombre: ");
                 String nombre = sc.nextLine();
@@ -47,7 +47,7 @@ public class estudiantes_view {
                 break;
             case 3:
                 System.out.println("Cedula del estudiante: ");
-                cedula = sc.nextInt();
+                cedula = sc.nextLine();
                 sc.nextLine();
                 System.out.println("Nuevo nombre: ");
                 nombre = sc.nextLine();
@@ -65,7 +65,7 @@ public class estudiantes_view {
             case 4:
                 //eliminar
                 System.out.println("Cedula del estudiante: ");
-                cedula = sc.nextInt();
+                cedula = sc.nextLine();
                 if (controlador.eliminarEstudiante(cedula)) {
                     System.out.println("Estudiante eliminado con exito :D");  
                 }else{
