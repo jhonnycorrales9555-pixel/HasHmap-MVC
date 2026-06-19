@@ -15,5 +15,9 @@ import java.util.HashMap;
 public class cliente_controller {
     private ArrayList<cliente_model> listaClientes;
     private HashMap<String, cliente_model> mapaClientes;
+    public cliente_controller() {
+        listaClientes = new ArrayList<>();
+        mapaClientes = new HashMap<>();
+    }
     
 }
