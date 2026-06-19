@@ -78,6 +78,10 @@ public class cliente_controller {
 
         return false;
     }
+    // Total clientes
+    public int totalClientes() {
+        return listaClientes.size();
+    }
 
 
 
