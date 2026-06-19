@@ -65,9 +65,8 @@ public class cliente_view {
                     }
                     break;
                 case 5:
-                    System.out.println("GRACIAS POR USAR EL PROGRAMA");
-                    System.exit(0);
-                    break;
+                    System.out.println("Regresando al menu principal...");
+                    return;
                 default:
                     System.out.println("opcion incorrecta:D");
             }
