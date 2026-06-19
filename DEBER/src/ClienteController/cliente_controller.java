@@ -19,5 +19,11 @@ public class cliente_controller {
         listaClientes = new ArrayList<>();
         mapaClientes = new HashMap<>();
     }
+    // Agregar
+    public void agregarCliente(cliente_model cliente) {
+        listaClientes.add(cliente);
+        mapaClientes.put(cliente.getCedula(), cliente);
+    }
+
     
 }
