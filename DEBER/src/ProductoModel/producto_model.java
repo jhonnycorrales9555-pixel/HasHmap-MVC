@@ -70,6 +70,12 @@ public class producto_model {
         this.stock = stock;
     }
     
+    @Override
+    //mostrar productos
+    public String toString(){
+        return "codigo: "+ codigo + "nombre: "+ nombre + "marca: " + marca + "precio: " + precio + "cantidad: " + cantidad + "stock: " + stock;
+    }
+    
     
     
     
